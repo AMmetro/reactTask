@@ -1,0 +1,13 @@
+.someClass {
+    background: yellow;
+    margin-left: 20px;
+
+}
+
+.error {
+    border: 2px solid red;
+}
+
+.valid {
+    border: 2px solid green;
+}
