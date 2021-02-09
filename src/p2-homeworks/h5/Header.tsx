@@ -6,7 +6,7 @@ function Header() {
     return (
         <div>
 
-            <header className={s.head}><h1>Home work</h1></header>
+            {/*<header className={s.head}><h1>Home work</h1></header>*/}
 
             <Navigation/>
 

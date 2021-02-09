@@ -14,18 +14,25 @@ const Greeting: React.FC<GreetingPropsType> = (
     {name, setNameCallback, addUser, error, totalUsers} // деструктуризация пропсов
 ) => {
 
-    const inputClass = error ? s.error : s.valid
+    const inputClass =`${error ? s.error : s.valid}`
     const hint = error ? "input valid name" : "add more name"
 
     return (
         <div>
-            <input value={name}
+                <div className={s.group}>
+                   <input
+                   value={name}
                    onChange={setNameCallback}
-                   className={inputClass}/>
-            <span>{error}</span>
-            <button onClick={addUser}>add</button>
-            <span className={s.someClass}>total Users={totalUsers}</span>
-            <div>{hint}</div>
+                   className={inputClass}
+                   required/>
+                   <span className={s.bar}></span>
+                   <label className={s.label}>put name here</label>
+                   {error && <span className={inputClass}>{error}</span>}
+                </div>
+                    <span>{error}</span>
+                    <button onClick={addUser}>add</button>
+                    <span className={s.hint}>total Users={totalUsers}</span>
+                    <div>{hint}</div>
         </div>
     );
 }
