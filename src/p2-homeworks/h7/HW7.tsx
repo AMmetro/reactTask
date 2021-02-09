@@ -2,10 +2,10 @@ import React, {useState} from "react";
 import SuperSelect from "./common/c5-SuperSelect/SuperSelect";
 import SuperRadio from "./common/c6-SuperRadio/SuperRadio";
 
-const arr = ["x", "y", "z", "w"];
+const arr = ["x", "y", "z"];
 
 function HW7() {
-    const [value, onChangeOption] = useState(arr[1]);
+    const [value, onChangeOption] = useState(arr[2]);
 
 
     return (
@@ -17,7 +17,6 @@ function HW7() {
                 <SuperSelect
                     options={arr}
                     value={value}
-                    // arrSelect={arrSelect}
                     onChangeOption={onChangeOption}
                 />
             </div>
