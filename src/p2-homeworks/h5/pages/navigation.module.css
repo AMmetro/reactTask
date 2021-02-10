@@ -1,0 +1,90 @@
+.active{
+    color: white;
+    text-decoration: none;
+}
+
+.head {
+    background: darkseagreen;
+}
+
+.hidden_menu_ticker {
+    display: none;
+}
+
+.btn_menu {
+    color: yellow;
+    background-color: darkseagreen;
+    position: fixed;
+    right: 25px;
+    top: 19px;
+    /*margin: 0px 20px 0 0;*/
+    padding: 5px;
+    cursor: pointer;
+    transition: left .23s;
+    z-index: 3;
+    width: 30px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+
+.hidden_menu {
+    display: block;
+    position: fixed;
+    list-style:none;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 170px;
+    background-color: darkseagreen;
+    height: 100%;
+    top: 0;
+    right: -170px;
+    transition: right .2s;
+    z-index: 2;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+.btn_menu span{
+    display: block;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+}
+
+.btn_menu span.first {
+    margin-top: 0px;
+}
+
+.hidden_menu li {
+    padding-top: 50px;
+    font-size: 25px;
+    color: red;
+}
+
+/*-----move menu button if input checked----*/
+.hidden_menu_ticker:checked ~ .btn_menu {
+    right: 100px;
+}
+.hidden_menu_ticker:checked ~ .hidden_menu {
+    right: 0;
+}
+
+/*-----rotation span inside of button if input checked----*/
+.hidden_menu_ticker:checked ~ .btn_menu span.first {
+    -webkit-transform: rotate(45deg);
+    top: 10px;
+}
+.hidden_menu_ticker:checked ~ .btn_menu span.second {
+    opacity: 0;
+}
+.hidden_menu_ticker:checked ~ .btn_menu span.third {
+    -webkit-transform: rotate(-45deg);
+    top: -10px;
+}
+
+
+
