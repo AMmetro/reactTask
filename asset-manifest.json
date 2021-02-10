@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/reactTask/static/css/main.bae58852.chunk.css",
-    "main.js": "/reactTask/static/js/main.7b1382c7.chunk.js",
-    "main.js.map": "/reactTask/static/js/main.7b1382c7.chunk.js.map",
+    "main.js": "/reactTask/static/js/main.f6ec17b6.chunk.js",
+    "main.js.map": "/reactTask/static/js/main.f6ec17b6.chunk.js.map",
     "runtime-main.js": "/reactTask/static/js/runtime-main.cf50bb16.js",
     "runtime-main.js.map": "/reactTask/static/js/runtime-main.cf50bb16.js.map",
     "static/js/2.b8b96dd0.chunk.js": "/reactTask/static/js/2.b8b96dd0.chunk.js",
     "static/js/2.b8b96dd0.chunk.js.map": "/reactTask/static/js/2.b8b96dd0.chunk.js.map",
     "index.html": "/reactTask/index.html",
-    "precache-manifest.c9fa0302a61e36db718034f3d405c667.js": "/reactTask/precache-manifest.c9fa0302a61e36db718034f3d405c667.js",
+    "precache-manifest.5cabf5d2f07858ce58d2579ffcc819ab.js": "/reactTask/precache-manifest.5cabf5d2f07858ce58d2579ffcc819ab.js",
     "service-worker.js": "/reactTask/service-worker.js",
     "static/css/main.bae58852.chunk.css.map": "/reactTask/static/css/main.bae58852.chunk.css.map",
     "static/js/2.b8b96dd0.chunk.js.LICENSE.txt": "/reactTask/static/js/2.b8b96dd0.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.cf50bb16.js",
     "static/js/2.b8b96dd0.chunk.js",
     "static/css/main.bae58852.chunk.css",
-    "static/js/main.7b1382c7.chunk.js"
+    "static/js/main.f6ec17b6.chunk.js"
   ]
 }
