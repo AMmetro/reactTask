@@ -16,7 +16,7 @@ function HW8() {
 
     const finalPeople = people.map(p => (
         <div key={p._id}>
-            some name, age
+           {p.name}, {p.age}
         </div>
     ))
 
