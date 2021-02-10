@@ -13,10 +13,11 @@
 
 .btn_menu {
     color: yellow;
-    background-color: darkgreen;
+    background-color: darkseagreen;
     position: fixed;
-    right: 0px;
-    margin: 40px 20px 0 0;
+    right: 25px;
+    top: 19px;
+    /*margin: 0px 20px 0 0;*/
     padding: 5px;
     cursor: pointer;
     transition: left .23s;
