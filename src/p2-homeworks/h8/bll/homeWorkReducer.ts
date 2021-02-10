@@ -5,7 +5,7 @@ export const homeWorkReducer = (state: any, action: any): any => {
             let newState = {state}
             console.log(newState)
             //@ts-ignore
-            let newSortState=newState.sort( (a:any,b:any) => {if(a.name < b.name) return -1;
+            let newSortState=state.sort( (a:any,b:any) => {if(a.name < b.name) return -1;
                                                                 if(a.name > b.name) return 1;})
             console.log(newSortState)
             return newSortState
