@@ -17,8 +17,6 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
     }
 ) => {
 
-    console.log("НЕ ТИПИЗИРОВАНЫ ПРОПСЫ")
-
     const mappedOptions: any[] = options ? options.map((elem, i) => <option
             key={elem + "-" + i}  // map options with key
             value={elem}
