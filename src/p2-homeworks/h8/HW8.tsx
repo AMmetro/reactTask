@@ -20,7 +20,39 @@ function HW8() {
         </div>
     ))
 
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "up"}))
+    const sortUp = () => {
+        setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "up"}))  
+    }
+    const sortDown = () => {
+        setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "down"}))  
+    }
+    const sortCheck = () => {
+        setPeople(homeWorkReducer(initialPeople, {type: "check"}))  
+    }
+
+
+    // test---------------------------------------------------------------------
+    // const ob1 = {_id: 1, name: "Александр", age: 66}
+    // const ob2 = {_id: 1, name: "Александр", age: 66}
+
+    // const People = [
+        // {_id: 1, name: "Александр", age: 66},
+        // {_id: 3, name: "Виктор", age: 44},
+        // {_id: 4, name: "Дмитрий", age: 40},
+        // {_id: 5, name: "Ирина", age: 55},
+        // {_id: 2, name: "Коля", age: 16},
+        // {_id: 0, name: "Кот", age: 3}
+    // ]
+
+    const newState = homeWorkReducer(initialPeople, {type: "sort", payload: "up"})
+        //   console.log(newState);
+        //   console.log(initialPeople[1]);
+        //   console.log(newState[0]==initialPeople[1]);
+                 
+          let equal = JSON.stringify(newState) == JSON.stringify(initialPeople);
+             
+    // -------------------------------------------------------------------------
+     
 
     return (
         <div>
@@ -31,10 +63,8 @@ function HW8() {
 
             {finalPeople}
             <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div>sort down</div>
-
-            check 18
-
+            <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
+            <div><SuperButton onClick={sortCheck}>check 18</SuperButton></div>
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativePeople/>*/}
