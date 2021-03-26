@@ -18,7 +18,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
 ) => {
 
     const mappedOptions: any[] = options ? options.map((elem, i) => <option
-            key={elem + "-" + i}  // map options with key
+            key={elem + "-" + i}
             value={elem}
             selected={i == 1 ? true : false}>
             {elem}
@@ -27,13 +27,12 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
 
 
     const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
-        // onChange
+
         onChangeOption && onChangeOption(e.currentTarget.value)
     }
 
 
     return (
-        //  value в restProps перебивает "selected=true/false"
 
             <select onChange={onChangeCallback} {...restProps}>
                {mappedOptions}

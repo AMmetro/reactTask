@@ -30,7 +30,7 @@ function Navigation() {
     let link_status1 = activeMenu === "link1" ? s.active : ""
     let link_status2 = activeMenu === "link2" ? s.active : ""
     let link_status3 = activeMenu === "link3" ? s.active : ""
-    console.log("link_status1=     " + link_status1)
+
 
     return (
         <div>

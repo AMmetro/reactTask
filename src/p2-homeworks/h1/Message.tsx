@@ -6,6 +6,8 @@ import {dataType} from "./HW1";
 
 function Message(props:dataType) {
 
+
+
     return (
 
         <div className={styles.container}>

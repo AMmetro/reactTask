@@ -1,25 +1,20 @@
 export const homeWorkReducer = (state: any, action: any): any => {
     switch (action.type) {
         case "sort": {
-            let newState:any=[]
+            let copyState:any=[]
+            for (let key in state) {copyState[key]=state[key]}
             if (action.payload=="up"){
-            for (let key in state) {newState[key]=state[key]}                     
-            newState.sort( (a:any,b:any) => {if(a.name < b.name) return -1;
-                                             if(a.name > b.name) return 1;})}
+                copyState.sort( (a:any,b:any) => {if(a.name < b.name) return -1;
+                    if(a.name > b.name) return 1;})}
             if (action.payload=="down"){
-            for (let key in state) {newState[key]=state[key]}                     
-            newState.sort( (a:any,b:any) => {if(a.name > b.name) return -1;
-                                             if(a.name < b.name) return 1;})
-            }
-            // console.log(newState)  //sort
-            // console.log(state)     // not sort
-            // console.log(state==newState);
-            return newState
+                copyState.sort( (a:any,b:any) => {if(a.name > b.name) return -1;
+                    if(a.name < b.name) return 1;}) }
+            return copyState
         }
         case "check": {
             //@ts-ignore
-            let newState=state.filter(el=> el.age>17 )
-            return newState
+            let copyState=state.filter(el=> el.age>17 )
+            return copyState
         }
         default: return state
     }

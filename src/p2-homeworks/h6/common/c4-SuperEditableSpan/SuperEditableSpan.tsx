@@ -45,12 +45,6 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
 
     const spanClassName = `${s.spanClass}`
 
-    console.log("restProps=  ",  restProps)
-    console.log("restSpanProps=  ",  restSpanProps)
-    console.log("children=  ",  children)
-    console.log("spanClassName=  ",  spanClassName)
-
-
                        let onKeyPress=()=>{
                        let Myst = document.getElementsByClassName(s.testInput)
                        {/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
