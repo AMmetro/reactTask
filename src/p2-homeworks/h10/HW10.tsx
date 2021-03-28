@@ -3,7 +3,7 @@ import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 import {useDispatch, useSelector} from 'react-redux'
 import { loadingAC } from "./bll/loadingReducer";
 import {AppStoreType} from "./bll/store";
-import spinerImg from "../h11/common/c7-SuperRange/spiner.gif"
+import spinerImg from "./bll/spiner.gif"
 
 
 

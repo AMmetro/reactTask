@@ -1,5 +1,6 @@
-import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from "react";
+import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, useState} from "react";
 import s from "./SuperRange.module.css";
+import testPic from "./picture.gif";
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
@@ -20,11 +21,15 @@ const SuperRange: React.FC<SuperRangePropsType> = (
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
+
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         onChange && onChange(e); // сохраняем старую функциональность
-
         onChangeRange && onChangeRange(+e.currentTarget.value);
     }
+
+
+    const size:any = restProps.value && restProps.value
+
 
     const finalRangeClassName = `${s.range} ${className ? className : ""}`;
 
@@ -34,10 +39,11 @@ const SuperRange: React.FC<SuperRangePropsType> = (
                 type={"range"}
                 onChange={onChangeCallback}
                 className={finalRangeClassName}
-                // onVolumeChange={()=>test()}
-
+                id={"size"}
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
+
+            <img src={testPic} id={"Pic"} style={{width: size*2, height: size/3}}  />
         </>
     );
 }
