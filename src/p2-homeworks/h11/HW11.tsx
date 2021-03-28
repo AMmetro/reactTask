@@ -34,10 +34,7 @@ function HW11() {
             </div>
 
             <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperRange/>*/}
-            {/*material*/}
-            {/*<AlternativeSuperDoubleRange/>*/}
+               {/*<AlternativeSuperDoubleRange/>*/}
             <hr/>
         </div>
     );
