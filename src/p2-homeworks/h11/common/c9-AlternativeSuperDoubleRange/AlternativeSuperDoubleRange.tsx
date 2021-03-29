@@ -1,58 +1,45 @@
-import React from "react";
-import s from "./SuperDoubleRange.module.css";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Slider from '@material-ui/core/Slider';
 
-//@ts-ignore
-import Nouislider from 'react-nouislider';
-import "../../../../../node_modules/react-nouislider/example/nouislider.css"
+const useStyles = makeStyles({
+    root: {
+        width: 300,
+        marginLeft: 50,
+    },
+});
 
-
-type signal=[number,number]
-
-type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: [number, number]) => void
-    value?: [number, number]
-    // min, max, step, disable, ...
+function valuetext(value: number) {
+    return `${value}°C`;
 }
 
-const AlternativeSuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
-    {
-        onChangeRange, value,
-        // min, max, step, disable, ...
-    }
-) => {
-    // сделать самому, можно подключать библиотеки
+export default function RangeSlider(props:any) {
+    const classes = useStyles();
+    const [value, setValue] = React.useState<number[]>([20, 37]);
 
-    const onChangeCallback=(e:signal)=>{
-        onChangeRange && onChangeRange(e)
-    }
+
+
+    const handleChange = (event: any, newValue: number | number[]) => {
+        setValue(newValue as number[]);
+        props.onChangeRange(newValue as number[])
+        // console.log(newValue as number[])
+    };
 
     return (
-        <>
-             DoubleRange
-        <div>
-            <div className={s.slider_Box}>
-                <Nouislider
-                    range={{min: 10, max: 200}}
-                    start={[value&&value[0], value&&value[1]]}
-                    onChange={(e:signal)=>onChangeCallback(e)}
-                    tooltips />
-            </div>
-
-            {/*<input*/}
-            {/*    type={"range"}*/}
-            {/*    // value={[value1,value2]}*/}
-            {/*    min={10}*/}
-            {/*    max={50}*/}
-            {/*    step={10}*/}
-
-                {/*// onChange={onChangeCallback}*/}
-                {/*// className={finalRangeClassName}*/}
-
-                {/*//{...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)*/}
-            {/*/>*/}
+        <div className={classes.root}>
+            <Typography id="range-slider" gutterBottom>
+                Temperature range
+            </Typography>
+            <Slider
+                min={20}
+                disabled={false}
+                value={value}
+                onChange={handleChange}
+                valueLabelDisplay="auto"
+                aria-labelledby="range-slider"
+                getAriaValueText={valuetext}
+            />
         </div>
-        </>
     );
 }
-
-export default AlternativeSuperDoubleRange;

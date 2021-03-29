@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import SuperRange from "./common/c7-SuperRange/SuperRange";
 import SuperDoubleRange from "./common/c8-SuperDoubleRange/SuperDoubleRange";
+import AlternativeSuperDoubleRange from "./common/c9-AlternativeSuperDoubleRange/AlternativeSuperDoubleRange";
 
 
 function HW11() {
@@ -11,6 +12,12 @@ function HW11() {
         setValue1(SliderData[0])
         setValue2(SliderData[1])
     }
+
+    const setVal=(xxx:any)=>{
+        setValue1(xxx[0])
+    }
+
+
 
     return (
         <div>
@@ -34,7 +41,7 @@ function HW11() {
             </div>
 
             <hr/>
-               {/*<AlternativeSuperDoubleRange/>*/}
+               <AlternativeSuperDoubleRange onChangeRange={setVal}/>
             <hr/>
         </div>
     );
