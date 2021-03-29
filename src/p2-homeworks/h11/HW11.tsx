@@ -13,8 +13,9 @@ function HW11() {
         setValue2(SliderData[1])
     }
 
-    const setVal=(xxx:any)=>{
-        setValue1(xxx[0])
+    const setVal=(data:any)=>{
+        setValue1(data[0])
+        setValue2(data[1])
     }
 
 
