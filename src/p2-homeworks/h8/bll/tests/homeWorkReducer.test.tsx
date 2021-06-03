@@ -48,8 +48,6 @@ test("sort name down", () => {
 test("check age 18", () => {
     const newState = homeWorkReducer(initialState, {type: "check", payload: 18});
 
-    console.log(newState)
-
     expect(newState.length).toBe(4)
 
 

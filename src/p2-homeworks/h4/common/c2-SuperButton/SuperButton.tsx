@@ -22,6 +22,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = ({red,
                 className={finalClassName}
                 {...restProps}
                 // отдаём кнопке остальные пропсы если они есть (children там внутри)
+                // там внутри есть   onClick={restProps.onClick}
             />
     );
 }

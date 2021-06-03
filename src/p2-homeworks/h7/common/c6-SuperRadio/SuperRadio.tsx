@@ -34,8 +34,7 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
                     onChange={onChangeCallback}
                 />
             <label key={name + "-" + i} htmlFor={o}>{o}</label>
-            {/*    {o}*/}
-            {/*</label>*/}
+
         </div>
     )) : [];
 

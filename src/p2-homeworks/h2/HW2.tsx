@@ -1,16 +1,11 @@
 import React, {useState} from "react";
 import Affairs from "./Affairs";
 
-// export type AffairPriorityType = any // need to fix any
-                                export type AffairPriorityType = "high" | "low"|"middle"
+export type AffairPriorityType = "high" | "low"|"middle"
+export type FilterType = "all" | AffairPriorityType;
 
-// export type AffairType = any; // need to fix any
-                                export type AffairType = {_id:number, name:string, priority:string};
+export type AffairType = {_id:number, name:string, priority:AffairPriorityType};
 
-export type FilterType = "all"|AffairPriorityType;
-
-
-// type defaultAffairsType <Array<affairTypes>>
 
 // constants
 const defaultAffairs: Array<AffairType> = [ // need to fix any
@@ -22,16 +17,18 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
 ];
 
 // pure helper functions
-export const filterAffairs = (affairs:Array<AffairType>, filter:FilterType ):any=> { // need to fix any
+
+
+export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => {
     if (filter === "all") return affairs;
-    else if (filter === "high") {
-        return affairs.filter(tsk => {return (tsk.priority === "high")})    }
-       else if (filter === "low") {
-        return affairs.filter(tsk => {return (tsk.priority === "low")})     }
-       else if (filter === "middle") {
-          return affairs.filter(tsk => {return (tsk.priority === "middle")})     }
-                                                        // return; // need to fix
+    else {
+        return affairs.filter(tsk => {
+            return (tsk.priority === filter)
+        })
+    }
 }
+
+
 
 export const deleteAffair = (affairs:Array<AffairType>, _id: number): Array<AffairType> => { // need to fix any
     return affairs.filter( a => a._id !== _id ); // need to fix

@@ -31,9 +31,6 @@ function HW8() {
     }
 
 
-
-          // let equal = JSON.stringify(newState) == JSON.stringify(initialPeople);
-
     return (
         <div>
             <hr/>

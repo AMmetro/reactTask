@@ -9,7 +9,8 @@ import spinerImg from "./bll/spiner.gif"
 
 function HW10() {
 
-    const loading=useSelector<AppStoreType>(state=>state.loading)
+    const loading=useSelector<AppStoreType>(state=>state.loading["loading"])
+
     const dispatch=useDispatch()
 
     const setLoading = () => {

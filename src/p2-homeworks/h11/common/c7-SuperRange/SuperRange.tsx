@@ -30,7 +30,6 @@ const SuperRange: React.FC<SuperRangePropsType> = (
 
     const size:any = restProps.value && restProps.value
 
-
     const finalRangeClassName = `${s.range} ${className ? className : ""}`;
 
     return (
