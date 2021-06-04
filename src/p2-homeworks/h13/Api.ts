@@ -11,7 +11,6 @@ export const API = {
         headers: {
               'Content-Type': 'application/json;charset=utf-8'
           },
-          // credentials: 'includ',
         body: JSON.stringify({success: checked})
       })
 
